@@ -1,9 +1,11 @@
+%% recursively find any value in the pascals triangle
+%% use: p(<some row>, <some column>, X)
 
 p(R, 1, Ans) :-
   R > 0,
   Ans is 1.
 
-p(R,R,Ans) :- 
+p(R,R,Ans) :-
   Ans is 1.
 
 p(R, C, Ans) :-
