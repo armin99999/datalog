@@ -1,0 +1,25 @@
+
+p(R, 1, Ans) :-
+  R > 0,
+  Ans is 1.
+
+p(R,R,Ans) :- 
+  Ans is 1.
+
+p(R, C, Ans) :-
+  C>R,
+  Ans is 0.
+
+p(R, C, Ans) :-
+  C<0,
+  Ans is 0.
+
+p(R, C, Ans) :-
+  R > 1,
+  C < R,
+  C > 1,
+  RN is R-1,
+  CN is C-1,
+  p(RN, CN, N1),
+  p(RN, C, N2),
+  Ans is N1+N2.
